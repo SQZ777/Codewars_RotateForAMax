@@ -22,5 +22,12 @@ namespace Codewars_RotateForAMax
         {
             Assert.AreEqual(231,Kata.MaxRot(123));
         }
+
+        [TestMethod]
+        public void Input_21_Should_Be_21()
+        {
+            Assert.AreEqual(21,Kata.MaxRot(21));
+        }
+
     }
 }
