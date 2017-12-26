@@ -4,7 +4,7 @@ namespace Codewars_RotateForAMax
     {
         public static long MaxRot(long n)
         {
-            throw new System.NotImplementedException();
+            return n;
         }
     }
 }
