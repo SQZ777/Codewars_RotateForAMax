@@ -8,20 +8,15 @@ namespace Codewars_RotateForAMax
     {
         public static long MaxRot(long n)
         {
-
-            var resultList = new List<long> {n};
-            for (var i = 0; i < n.ToString().Length - 1; i++)
+            var resultList = new List<long> { n };
+            var nString = n.ToString();
+            for (var i = 0; i < nString.Length; i++)
             {
-                var charIndex = resultList[i].ToString()[i];
-                var nowString = resultList[i].ToString();
-                resultList.Add(GetRotatedNumber(nowString, i, charIndex));
+                nString += nString[i];
+                nString = nString.Remove(i, 1);
+                resultList.Add(long.Parse(nString));
             }
             return resultList.Max();
-        }
-
-        private static long GetRotatedNumber(string nString, int i, char charIndex)
-        {
-            return int.Parse(nString.Remove(i, 1) + charIndex);
         }
     }
 }

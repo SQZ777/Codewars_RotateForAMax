@@ -35,5 +35,12 @@ namespace Codewars_RotateForAMax
             Assert.AreEqual(321,Kata.MaxRot(321));
         }
 
+        [TestMethod]
+        public void Input_9876543210000000000_Should_Be_9876543210000000000()
+        {
+
+            Assert.AreEqual(987654321000000000, Kata.MaxRot(987654321000000000));
+        }
+
     }
 }
