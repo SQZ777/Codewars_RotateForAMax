@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Codewars_RotateForAMax
 {
@@ -6,14 +7,17 @@ namespace Codewars_RotateForAMax
     {
         public static long MaxRot(long n)
         {
-            if (n.ToString().Length < 2)
-                return n;
+
             var nString = n.ToString();
-            var nChar0 = nString[1];
-            var roatedN = int.Parse(nChar0 + nString.Substring(0, 1));
-            if (roatedN > n)
-                return roatedN;
-            return n;
+            var resultList = new List<long>();
+            resultList.Add(n);
+            for (var i = 0; i < nString.Length - 1; i++)
+            {
+                var charIndex = nString[i];
+                resultList.Add(int.Parse(nString.Remove(i, 1) + charIndex));
+                nString = nString.Remove(i, 1) + charIndex;
+            }
+            return resultList.Max();
         }
     }
 }
