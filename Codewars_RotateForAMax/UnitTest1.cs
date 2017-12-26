@@ -6,8 +6,9 @@ namespace Codewars_RotateForAMax
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void Input_1_Should_Be_1()
         {
+            Assert.AreEqual(1,Kata.MaxRot(1));   
         }
     }
 }
