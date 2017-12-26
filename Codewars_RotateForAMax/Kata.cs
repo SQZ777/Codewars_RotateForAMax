@@ -18,5 +18,5 @@ namespace Codewars_RotateForAMax
             }
             return resultList.Max();
         }
-    }
+    } 
 }
